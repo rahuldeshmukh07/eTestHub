@@ -1,0 +1,191 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Online Examination System">
+<meta name="author" content="MSkill batch 6">
+<title>Online Exam Dashboard</title>
+<link rel="stylesheet"
+	href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/vendor/fontawesome/css/all.min.css"
+	type="text/css">
+    <link rel="stylesheet" href="/assets/css/style5.css">
+    <script src="/assets/js/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+    
+    <script src="/controller/angularApp.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/js/exam.js"></script>
+</head>
+
+<body id="page-top" ng-app="myApp">
+	<!-- Page Wrapper -->
+	<div id="wrapper">
+		<!-- Sidebar -->
+		<div ng-include="'/templates/sidebar.html'" class="bg-gradient-info"></div>
+		<!-- End of Sidebar -->
+		<!-- Content Wrapper -->
+		<div id="content-wrapper" class="d-flex flex-column">
+			<!-- Main Content -->
+			<div id="content">
+				<!-- Topbar -->
+				<div ng-include="'/templates/topbar.html'"></div>
+				<!-- End of Topbar -->
+
+				<!-- Begin Page Content -->
+				<div class="container-fluid">
+					<!-- Page Heading -->
+					<div
+						class="d-sm-flex align-items-center justify-content-between mb-4">
+						<h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+					</div>
+
+					<!-- Content Row -->
+					<div class="row">
+
+						<!-- Student -->
+						<div class="col-xl-4 col-md-6 mb-4">
+							<div class="card border-left-primary shadow h-10 py-2">
+								<div class="card-body">
+									<div class="row no-gutters align-items-center">
+										<div class="col mr-2">
+											<div
+												class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+												Student</div>
+											<div class="h5 mb-0 font-weight-bold text-gray-800"><p id="totalStudent"></p></div>
+										</div>
+										<div class="col-auto">
+											<i class="fas fa-user fa-2x text-gray-300"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Moderator -->
+						<div class="col-xl-4 col-md-6 mb-4">
+							<div class="card border-left-success shadow h-10 py-2">
+								<div class="card-body">
+									<div class="row no-gutters align-items-center">
+										<div class="col mr-2">
+											<div
+												class="text-xs font-weight-bold text-success text-uppercase mb-1">
+												Moderator</div>
+											<div class="h5 mb-0 font-weight-bold text-gray-800"><p id="totalModerator"></p></div>
+										</div>
+										<div class="col-auto">
+											<i class="fas fa-user fa-2x text-gray-300"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Faculty -->
+						<div class="col-xl-4 col-md-6 mb-4">
+							<div class="card border-left-danger shadow h-10 py-2">
+								<div class="card-body">
+									<div class="row no-gutters align-items-center">
+										<div class="col mr-2">
+											<div
+												class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+												Faculty</div>
+											<div class="row no-gutters align-items-center">
+												<div class="col-auto">
+													<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><p id="totalFaculty"></p></div>
+												</div>
+											</div>
+										</div>
+										<div class="col-auto">
+											<i class="fas fa-user fa-2x text-gray-300"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class=col-sm-6>
+
+
+
+
+							<div id="piechart"></div>
+
+							<!-- script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
+
+							<script type="text/javascript">
+                                // Load google charts
+                                google.charts.load('current', { 'packages': ['corechart'] });
+                                google.charts.setOnLoadCallback(drawChart);
+
+                                // Draw the chart and set the chart values
+                                function drawChart() {
+                                    var data = google.visualization.arrayToDataTable([
+                                        ['Branch', 'Result'],
+                                        ['CSE', 60],
+                                        ['IT', 13],
+                                        ['ME', 10],
+                                        ['MCA', 7],
+                                        ['ECE', 10]
+                                    ]);
+
+                                    // Optional; add a title and set the width and height of the chart
+                                    var options = { 'title': 'Branchwise Share', 'width': 450, 'height': 280 };
+
+                                    // Display the chart inside the <div> element with id="piechart"
+                                    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                                    chart.draw(data, options);
+                                }
+                            </script>
+						</div>
+						<br>
+						<!-- <div class="clearfix"></div>
+
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Bar Chart</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-bar">
+                                        <canvas id="myBarChart"></canvas>
+                                    </div>
+                                    <hr>
+                                    <code>/js/demo/chart-bar-demo.js</code> file.
+                                </div>
+                            </div>
+
+                        </div> -->
+</body>
+<footer>
+	<!-- Bootstrap core JavaScript-->
+	<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Core plugin JavaScript-->
+	<script src="/assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+	<!-- Custom scripts for all pages-->
+	<script src="/assets/js/sb-admin-2.min.js"></script>
+<div class="mypanel"></div>
+	<script>
+    	$.getJSON('http://localhost:8080/api/v1/admin/student', function(data) {
+			var totalStudent = Object.keys(data).length;
+			document.getElementById("totalStudent").innerHTML =  Object.keys(data).length;
+			console.log(totalStudent)
+    	});
+    	$.getJSON('http://localhost:8080/api/v1/admin/moderator', function(data) {
+			var totalStudent = Object.keys(data).length;
+			document.getElementById("totalModerator").innerHTML =  Object.keys(data).length;
+			console.log(totalModerator)
+    	});
+    	$.getJSON('http://localhost:8080/api/v1/admin/faculty', function(data) {
+			var totalStudent = Object.keys(data).length;
+			document.getElementById("totalFaculty").innerHTML =  Object.keys(data).length;
+			console.log(totalFaculty)
+    	});
+    </script>
+</footer>
+
+</html>

@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+/*----------------Fonts--------------*/
+
+
+/*-----------------------------------*/
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/Opensans-Regular.eot');
+    src: url('../fonts/Opensans-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Opensans-Regular.woff') format('woff'), url('../fonts/Opensans-Regular.ttf') format('truetype'), url('../fonts/Opensans-Regular.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans Semibold';
+    src: url('../fonts/Opensans-Semibold.eot');
+    src: url('../fonts/Opensans-Semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/Opensans-Semibold.woff') format('woff'), url('../fonts/Opensans-Semibold.ttf') format('truetype'), url('../fonts/Opensans-Semibold.svg#open_sanssemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans Bold';
+    src: url('../fonts/Opensans-Bold.eot');
+    src: url('../fonts/Opensans-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Opensans-Bold.woff') format('woff'), url('../fonts/Opensans-Bold.ttf') format('truetype'), url('../fonts/Opensans-Bold.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*---------------Body----------------*/
+
+
+/*-----------------------------------*/
+
+body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: Open Sans;
+    color: #000;
+    font-size: 15px;
+    /* over-flow: hidden; */
+    overflow-y: scroll;
+    -webkit-filter: none;
+}
+
+.import {
+    width: 100%;
+    padding: 30px 0px 30px 30px;
+    /*(top,bottom)*/
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    margin-left: 30px;
+    margin-right: 50px;
+    border-radius: 4px;
+}
+
+.content {
+    padding: 10px 15px 15px 20px;
+    justify-content: space-between;
+}
+
+.text-type {
+    color: white;
+}
+
+.note {
+    padding-right: 20px;
+    padding-top: 5px;
+}
+
+.studentwhite {
+    color: white;
+}
+
+
+
+#fac {
+	padding-left: 5px;
+	margin-left: 18%;
+	padding-top: 3%;
+	height: 120px;
+	
+}
+#ss, #sy{
+	margin-right:20%;
+	width:80px;
+	height:100px;
+}
+
+.uploadfilex {
+	font-size: 18px;         
+	margin: 5%;
+	margin-left:30%;
+	
+	
+}
+
+.upst {
+	
+	margin-top: 10%;
+	background: #006699;
+	color: #CCCCCC;
+}
+
+#tasktab table tr th {
+	background: #337ab7;
+	color: white;
+	text-align: left;
+	vertical-align: center;
+}
+
+.q {
+	border: 1px solid rebeccapurple;
+	height: 52px;
+	width: 500px;
+	margin-top: 3%;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	background-color: #f8f8f8;
+}
+
+.p1 {
+	border: 1px solid rebeccapurple;
+	height: 100px;
+	width: 500px;
+	margin-top: 3%;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	background-color: #f8f8f8;
+}
+
+.block {
+	display: block;
+}
+
+.evalbox {
+	width: 560px;
+	height: 450px;
+	margin: 70px;
+	margin-left: 20%;
+	padding: 15px;
+	border: 3px solid #888888;
+	background-color: #c1c1d9;
+	border-radius: 10px;
+	box-shadow: 5px 10px #888888;
+	font-size:16px;
+}
+
+.ev {
+	width: 19%;
+	margin-left: 82%;
+}
+
+.t {
+	text-align: center;
+}
+
+.qbut {
+	margin-right: 5%;
+	margin-top: 10%;
+	background: #006699;
+	color: #CCCCCC;
+	cursor: pointer;
+}
+
+.profilecont{
+	width:50%;
+	margin-left:25%;
+	border: 2px solid blue;
+	padding: 5px;
+  	box-shadow: 5px 10px #888888;
+}
+
+.txxt {
+	text-align: right;
+	width: 95px;
+	margin-left: 82%;
+	font-size: 16px;
+}

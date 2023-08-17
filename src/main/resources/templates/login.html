@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login Page</title>
+	<link href="/css/tailwind.min.css" rel="stylesheet">
+	<!--     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" />
+ -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="/controller/index.js"></script>
+
+</head>
+
+<body class="flex h-screen bg-blue-700">
+	<div class="w-full max-w-xs m-auto bg-blue-100 rounded p-5" ng-app="login_app">
+		<div ng-controller="logincontroller">
+			<header>
+				<img class="w-20 mx-auto mb-5"
+					src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQdoaQQhogU-NF9Kn6f34rybyDi4u7RiCn_Iw&usqp=CAU" />
+			</header>
+			<form ng-submit="submitForm()">
+				<div>
+					<div>
+						<label class="w-full bg-red-700 text-white font-bold py-2 px-4 mb-6 rounded"
+							ng-show="message">{{message}}</label> <label class="block mb-2 text-blue-500"></label>
+					</div>
+				</div>
+				<div>
+					<label class="block mb-2 text-blue-500" for="username">User
+						ID</label> <input
+						class="w-full p-2 mb-6 text-blue-700 border-b-2 border-blue-500 outline-none focus:bg-gray-300"
+						type="text" name="username" ng-model="username">
+				</div>
+				<div>
+					<label class="block mb-2 text-indigo-500" for="password">Password</label>
+					<input
+						class="w-full p-2 mb-6 text-blue-700 border-b-2 border-blue-500 outline-none focus:bg-gray-300"
+						type="password" name="password" ng-model="password">
+				</div>
+				<div>
+					<input class="w-full bg-blue-700 hover:bg-pink-700 text-white font-bold py-2 px-4 mb-6 rounded"
+						type="submit">
+				</div>
+			</form>
+			<footer>
+				<a class="text-blue-700 hover:text-pink-700 text-sm float-right" href="#">Forgot Password?</a>
+
+			</footer>
+		</div>
+	</div>
+</body>
+
+</html>

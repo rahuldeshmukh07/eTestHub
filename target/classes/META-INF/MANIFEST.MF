@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Built-By: rahuldeshmukh
+Build-Jdk: 17.0.5
+Implementation-Title: ExamPortal
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.mskill
+Implementation-URL: https://spring.io/projects/spring-boot/ExamPortal
+Created-By: Maven Integration for Eclipse
+

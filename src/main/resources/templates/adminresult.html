@@ -1,0 +1,197 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Online Examination System">
+    <meta name="author" content="MSkill batch 6">
+    <title>Online Exam Dashboard</title>
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/vendor/dataTables/datatables.min.css">
+    <link rel="stylesheet" href="/assets/vendor/dataTables/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="/assets/vendor/dataTables/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="/assets/vendor/fontawesome/css/all.min.css" type="text/css">
+<link rel="stylesheet" href="/assets/css/style5.css">
+<script src="/assets/js/angular.min.js"></script>
+<script src="/controller/angularApp.js"></script>
+
+</head>
+
+<body id="page-top" ng-app="myApp">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Sidebar -->
+    	<div ng-include="'/templates/sidebar.html'"></div>
+        <!-- End of Sidebar -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+                <!-- Topbar -->
+    			<div ng-include="'/templates/topbar.html'"></div>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container">
+                    <!-- Page Heading -->
+
+                    <!-- Content Row -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                           
+
+                           
+                      
+                            <!-- DataTales Example -->
+                            <div class="card shadow">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Student Result</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="table" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Student ID</th>
+                                                    <th>Name</th>
+                                                    <th>College ID</th>
+                                                    <th>Branch</th>
+                                                    <th>Email</th>
+                                                    <th>Mobile</th>
+                                                    <th>Academic Year</th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Student ID</th>
+                                                    <th>Name</th>
+                                                    <th>College ID</th>
+                                                    <th>Branch</th>
+                                                    <th>Email</th>
+                                                    <th>Mobile</th>
+                                                    <th>Academic Year</th>
+                                                   
+                                                </tr>
+                                            </tfoot>
+                                            <tbody>
+                                                <tr>
+                                                    <td align="right">1000001</td>
+                                                    <td>Ms. Monika Bandray</td>
+                                                    <td>MU0101</td>
+                                                    <td align="center">CSE</td>
+                                                    <td>monica@gmail.com</td>
+                                                    <td align="right">1234567890</td>
+                                                    <td align="center">2020</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td align="right">1000002</td>
+                                                    <td>Mr. Shatayu Mondhe</td>
+                                                    <td>MU0101</td>
+                                                    <td align="center">IT</td>
+                                                    <td>shatayu@yahoo.com</td>
+                                                    <td align="right">3215671234</td>
+                                                    <td align="center">2020</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td align="right">1000003</td>
+                                                    <td>Mr. Arijit Rana</td>
+                                                    <td>MU0103</td>
+                                                    <td align="center">MCA</td>
+                                                    <td>arijit@gmail.com</td>
+                                                    <td align="right">2345823456</td>
+                                                    <td align="center">2020</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td align="right">1000004</td>
+                                                    <td>Mr. Deepesh Doraya</td>
+                                                    <td>MU0104</td>
+                                                    <td align="center">EC</td>
+                                                    <td>deep@gmail.com</td>
+                                                    <td align="right">1234678938</td>
+                                                    <td align="center">2020</td>
+                                                    
+                                                </tr>
+                                                <!-- <tr>
+                                                    <td align="right">1000005</td>
+                                                    <td>Mr. Maruti Hota</td>
+                                                    <td>MU0102</td>
+                                                    <td align="center">EE</td>
+                                                    <td>hota@gmail.com</td>
+                                                    <td align="right">6785367848</td>
+                                                    <td align="center">2020</td>
+                                                    <td>
+                                                        <a href="javascript:void()" data-toggle="tooltip" data-placement="top" title="Edit" class="btn btn-sm btn-warning">
+                                                            <i class="fas fa-edit" aria-hidden="true"></i>
+                                                        </a>
+                                                        <a href="javascript:void()" data-toggle="tooltip" data-placement="top" title="Delete" class="btn btn-sm btn-danger delete">
+                                                            <i class="fas fa-window-close" aria-hidden="true"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="right">1000006</td>
+                                                    <td>Mr. Sachin Tendulkar</td>
+                                                    <td>MU0101</td>
+                                                    <td align="center">Civil</td>
+                                                    <td>srt@gmail.com</td>
+                                                    <td align="right">20202020</td>
+                                                    <td align="center">2020</td>
+                                                    <td>
+                                                        <a href="javascript:void()" data-toggle="tooltip" data-placement="top" title="Edit" class="btn btn-sm btn-warning">
+                                                            <i class="fas fa-edit" aria-hidden="true"></i>
+                                                        </a>
+                                                        <a href="javascript:void()" data-toggle="tooltip" data-placement="top" title="Delete" class="btn btn-sm btn-danger delete">
+                                                            <i class="fas fa-window-close" aria-hidden="true"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr> -->
+                                            </tbody>
+                                        </table>
+                                        <br>
+                                        <button type="button" onclick="myFunction()" class="btn btn-info" style="float: right;"><b><a style="color: #fff;">Declare Result</a></b></button>
+                                       
+
+										<script>
+										function myFunction() {
+  										alert("Results have been declared Successfully!");
+										}
+										</script>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+</body>
+<footer>
+    <!-- Bootstrap core JavaScript-->
+    <script src="/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/assets/js/sb-admin-2.min.js"></script>
+    <script src="/assets/vendor/dataTables/datatables.min.js"></script>
+    <script src="/assets/vendor/dataTables/dataTables.bootstrap4.min.js"></script>
+    <script src="/assets/vendor/dataTables/jquery.dataTables.min.js"></script>
+
+    <script>
+        // Call the dataTables jQuery plugin
+        $(document).ready(function() {
+            $('#table').DataTable();
+        });
+    </script>
+</footer>
+
+</html>
